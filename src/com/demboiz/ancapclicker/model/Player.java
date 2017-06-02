@@ -15,7 +15,7 @@ public class Player {
 	 */
 	public Player(){
 		assets.add(new Asset("Asset1", 1));
-		
+		assets.add(new Asset("Asset2", 5));
 	}
 	
 	
@@ -25,7 +25,7 @@ public class Player {
 	 */
 	public void update(){
 		for(Asset asset:assets){
-			gainMoney(asset.getIncome());
+			gainMoney(asset.getIncome()*asset.getAssetAmount());
 		}
 	}
 	
@@ -39,6 +39,10 @@ public class Player {
 		}catch(IndexOutOfBoundsException e){
 			System.out.println("Fail");
 		}
+	}
+	
+	public Asset returnAsset(int type){
+		return assets.get(type);
 	}
 	
 	
