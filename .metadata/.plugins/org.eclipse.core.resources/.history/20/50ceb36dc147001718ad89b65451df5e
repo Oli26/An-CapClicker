@@ -1,0 +1,34 @@
+package com.demboiz.ancapclicker.view;
+
+import java.awt.Color;
+import java.awt.Graphics;
+
+import javax.swing.JPanel;
+
+import com.demboiz.ancapclicker.model.Player;
+
+public class GamePanel extends JPanel {
+	Player player;
+	
+	
+	public GamePanel(Player playey){
+		this.player = player;
+    	setBackground(new Color(0x41, 0x76, 0x43));
+    	setVisible(true);
+    	setOpaque(true);
+	}
+	
+	 private void paintAreas(Graphics g) {
+		  g.drawString(, x, y);
+		  
+		  
+	 }
+	 
+	 
+	 @Override
+	  public void paintComponent(Graphics g) {
+		 super.paintComponent(g);
+		 paintAreas(g);
+	  }
+	
+}

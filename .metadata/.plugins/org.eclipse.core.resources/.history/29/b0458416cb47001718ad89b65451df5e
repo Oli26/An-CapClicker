@@ -1,0 +1,49 @@
+package com.demboiz.ancapclicker.model;
+
+public class Asset {
+
+	// Initialise variables.
+		protected long income;
+		protected long amount;
+		protected String name;
+		protected long cost;
+		
+		
+		public Asset(String name, int income, int cost){
+			this.name = name;
+			this.income = income;
+			this.amount = 0;
+			this.cost = cost;
+		}
+		
+		
+		/**
+		 * Increases amount by input.
+		 */
+		public void gainAsset(int amount){
+			this.amount += amount;
+		}
+		
+		
+		public void priceIncrease(){
+			cost = Math.round(cost*1.1);
+		}
+		
+		/**
+		 * Returns amount.
+		 */
+		public int getAssetAmount(){
+			return this.amount;
+		}
+		
+		
+		/**
+		 * Returns income.
+		 */
+		public int getIncome(){
+			return income;	
+		}
+		
+		
+	
+}

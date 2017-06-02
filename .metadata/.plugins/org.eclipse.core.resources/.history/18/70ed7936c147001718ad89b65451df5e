@@ -1,0 +1,17 @@
+package com.demboiz.ancapclicker.view;
+
+import java.awt.Color;
+
+import javax.swing.JPanel;
+
+public class GamePanel extends JPanel {
+	
+	public GamePanel(){
+    	setBackground(new Color(0x41, 0x76, 0x43));
+    	setVisible(true);
+    	setOpaque(true);
+	}
+	
+	
+	
+}

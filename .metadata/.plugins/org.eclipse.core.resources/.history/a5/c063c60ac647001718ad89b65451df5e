@@ -1,0 +1,122 @@
+package com.demboiz.ancapclicker.view;
+
+import java.awt.Graphics;
+import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.util.Timer;
+import java.util.TimerTask;
+
+import javax.swing.AbstractAction;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.SwingConstants;
+
+import com.demboiz.ancapclicker.model.Player;
+
+
+
+public class GameMenu {
+
+	private JFrame frame;
+	private GridLayout layout;
+	private Graphics g;
+	
+	public GameMenu(){
+		// Game variables
+		Player player = new Player();
+		
+		
+		
+		
+		frame = new JFrame("An-Cap Clicker");
+		layout = new GridLayout(20,5);
+		frame.setLayout(layout);
+
+		
+		// Team label.
+		JLabel team = new JLabel("Team Demboiz");
+		team.setHorizontalAlignment(SwingConstants.RIGHT);
+		team.setVerticalAlignment(SwingConstants.TOP);
+		frame.add(team);
+		
+		
+		
+		// Money label.
+		JLabel moneyLabel = new JLabel("Money: " + Integer.toString(player.getMoney()) + "$");
+		moneyLabel.setHorizontalAlignment(SwingConstants.CENTER);
+		frame.add(moneyLabel);
+		
+		
+		// Asset labels.
+		JLabel asset1Label = new JLabel("Laborers: " + player.returnAsset(0).getAssetAmount());
+		JLabel asset2Label = new JLabel("Primative machines: " + player.returnAsset(1).getAssetAmount());
+		asset1Label.setHorizontalAlignment(SwingConstants.CENTER);
+		asset2Label.setHorizontalAlignment(SwingConstants.CENTER);
+		frame.add(asset1Label);
+		frame.add(asset2Label);
+		
+		
+		// Asset1 button creation.
+		AbstractAction buyAsset1Action = new AbstractAction(){
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				player.gainAsset(0, 1);
+			}
+		};
+		JButton buyAsset1 = new JButton(buyAsset1Action);
+		buyAsset1.setText("Buy laborer");
+		frame.add(buyAsset1);
+		
+		
+		buyAsset1.addActionListener(new ActionListener() {
+	         public void actionPerformed(ActionEvent e) {
+	        	 asset1Label.setText("Laborers: " + player.returnAsset(0).getAssetAmount());
+	         }
+		});
+		
+		// Asset2 button creation.
+		AbstractAction buyAsset2Action = new AbstractAction(){
+				@Override
+				public void actionPerformed(ActionEvent e) {
+					player.gainAsset(1, 1);
+				}
+		};
+		JButton buyAsset2 = new JButton(buyAsset2Action);
+				buyAsset2.setText("Buy primative machine");
+				frame.add(buyAsset2);
+				
+				
+		buyAsset2.addActionListener(new ActionListener() {
+			         public void actionPerformed(ActionEvent e) {
+			        	 asset2Label.setText("Primative machines: " + player.returnAsset(1).getAssetAmount()+1);
+			         }
+		});		
+		
+		
+		
+		
+		
+		
+		frame.setSize(500, 800);
+		frame.setVisible(true);
+		
+		
+		TimerTask updateTask = new TimerTask(){
+			public void run(){
+				player.update();
+				moneyLabel.setText("Money: " + Integer.toString(player.getMoney()) + "$");
+			}
+			
+		};
+		
+		Timer timer = new Timer();
+		long time0 = 0;
+		long time1000 = 1000;
+		timer.schedule(updateTask, time0, time1000);
+		
+		
+		
+	}
+}

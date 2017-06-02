@@ -1,0 +1,214 @@
+package graphEditor;
+import graphEditor.model.GraphModel;
+import graphEditor.model.GraphVertex;
+import graphEditor.model.GraphEdge;
+import graphEditor.view.GraphFrame;
+import graphEditor.view.GraphPanel;
+import graphEditor.controller.ButtonBar;
+
+//import java.util.Observable;
+//import java.util.Observer;
+import java.io.*;
+import java.util.*;
+
+import javax.swing.JOptionPane;
+import javax.swing.*;
+import java.awt.Dimension;
+import java.awt.Color;
+import java.awt.event.KeyEvent;
+import java.awt.GridLayout;
+
+
+public class GraphEditor extends Observable implements Observer{
+	GraphModel model;
+	JFrame frame;
+	
+	
+	/**
+	 * Constructor. Creates JFrame and GraphModel.
+	 */
+	public GraphEditor(){
+		frame = new GraphFrame(this);
+		model = new GraphModel();
+	}
+	
+	/**
+	 * Main program.
+	 */	
+	public static void main(String[] args){
+			GraphEditor editor = new GraphEditor();
+	}
+
+	/**
+	 * Creates popup message to be used when creation of a vertex or edge fails.
+	 */	
+	public void creationFailedMessage(){
+		JOptionPane.showMessageDialog(null,"Creation failed. Try again.");	
+	}
+	
+	/**
+	 * Action call to create vertex. Creates popup for input.
+	 */	
+	public void createVertex(){
+		
+		JTextField field1 = new JTextField("Name");
+		JTextField field2 = new JTextField("X Y");
+		JTextField field3 = new JTextField("Height Width");
+		JPanel panel = new JPanel(new GridLayout(0,1));
+		panel.add(new JLabel("Name:"));
+		panel.add(field1);
+		panel.add(new JLabel("X and Y:"));
+		panel.add(field2);
+		panel.add(new JLabel("Height and Width:"));
+		panel.add(field3);
+		
+		int result = JOptionPane.showConfirmDialog(null,panel, "Create vertex", JOptionPane.OK_CANCEL_OPTION, JOptionPane.PLAIN_MESSAGE);
+
+		if(result == JOptionPane.OK_OPTION){
+			String name = field1.getText();
+			String XY = field2.getText();
+			String HW = field3.getText();
+			try{
+				String[] pos = XY.split("\\s+");
+				String[] size = HW.split("\\s+");
+				int x = Integer.parseInt(pos[0]);
+				int y = Integer.parseInt(pos[1]);
+				int height = Integer.parseInt(size[0]);
+				int width = Integer.parseInt(size[1]);
+				model.addVertex(name,x,y,height,width);
+			}catch(NumberFormatException e){
+				creationFailedMessage();
+			}
+		}
+		setChanged();
+        notifyObservers();
+	}
+	
+	
+	public void deleteVertex(){
+		JTextField field1 = new JTextField("Name");
+		JPanel panel = new JPanel(new GridLayout(0,1));
+		panel.add(new JLabel("Name:"));
+		panel.add(field1);
+		
+		int result = JOptionPane.showConfirmDialog(null,panel, "Remove vertex", JOptionPane.OK_CANCEL_OPTION, JOptionPane.PLAIN_MESSAGE);
+
+		if(result == JOptionPane.OK_OPTION){
+			String name = field1.getText();
+			model.removeVertexAndEdges(name);
+		}
+		setChanged();
+        notifyObservers();
+	}
+	
+	/**
+	 * Action call to create edge. Creates popup for input.
+	 */	
+	public void createEdge(){
+		
+		
+		JTextField field1 = new JTextField("Node 1");
+		JTextField field2 = new JTextField("Node 2");
+		JPanel panel = new JPanel(new GridLayout(0,1));
+		panel.add(new JLabel("Node 1"));
+		panel.add(field1);
+		panel.add(new JLabel("Node 2"));
+		panel.add(field2);
+		
+		int result = JOptionPane.showConfirmDialog(null, panel, "Create Edge", JOptionPane.OK_CANCEL_OPTION, JOptionPane.PLAIN_MESSAGE);
+		
+		if(result == JOptionPane.OK_OPTION){
+			String name1 = field1.getText();
+			String name2 = field2.getText();
+			int EdgePass = model.addEdge(name1,name2);
+			if(EdgePass == 0){
+				creationFailedMessage();
+			}
+		}
+		
+		setChanged();
+        notifyObservers();
+		
+	}
+	
+	
+	public void deleteEdge(){
+		JTextField field1 = new JTextField("Node 1");
+		JTextField field2 = new JTextField("Node 2");
+		JPanel panel = new JPanel(new GridLayout(0,1));
+		panel.add(new JLabel("Node 1"));
+		panel.add(field1);
+		panel.add(new JLabel("Node 2"));
+		panel.add(field2);
+		
+		int result = JOptionPane.showConfirmDialog(null, panel, "Remove Edge", JOptionPane.OK_CANCEL_OPTION, JOptionPane.PLAIN_MESSAGE);
+		
+		if(result == JOptionPane.OK_OPTION){
+			String name1 = field1.getText();
+			String name2 = field2.getText();
+			model.removeEdge(name1,name2);
+		}
+		
+		setChanged();
+        notifyObservers();
+		
+	}
+	/**
+	 * Action call to save.
+	 */
+	public void save(){
+		String line = JOptionPane.showInputDialog("Enter a save name.");		
+		model.saveToFile(line);
+	}
+	
+	/**
+	 * Action call to load.
+	 */	
+	public void load(){
+		
+		File folder = new File("Saves");
+		File[] files = folder.listFiles();
+		int size = files.length;
+		String[] choices = new String[size];
+		for(int i=0;i<size;i++){
+			choices[i] = files[i].getName();
+		}
+		String choice = (String)JOptionPane.showInputDialog(null, "Choose file", "Load file", JOptionPane.QUESTION_MESSAGE,null,choices,choices[0]);
+		model.loadFromFile(choice);
+		//String line = JOptionPane.showInputDialog("Enter a file to load from");		
+		//model.loadFromFile(line);
+		setChanged();
+        notifyObservers();
+	}
+	
+	public void reset(){
+		model.reset();
+		setChanged();
+        notifyObservers();
+	}
+	
+	/**
+	 * Returns all the vertices from model in a List.
+	 */	
+	public List<GraphVertex> returnVertices(){
+		return model.returnVertices();
+	}
+	
+	/**
+	 * Returns all the edges from model in a List.
+	 */
+	public List<GraphEdge> returnEdges(){
+		return model.returnEdges();
+	}
+	
+	 /** 
+     * Update.
+     */
+    @Override
+    public void update(Observable observable, Object message) {
+        setChanged();
+        notifyObservers();
+    }
+	
+	
+}

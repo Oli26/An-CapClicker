@@ -1,0 +1,25 @@
+package com.demboiz.ancapclicker.view;
+
+import java.awt.Color;
+import java.awt.Graphics;
+import java.awt.Graphics2D;
+import java.awt.Rectangle;
+import java.util.List;
+
+import javax.swing.JPanel;
+
+public class GamePanel extends JPanel {
+	
+	public GamePanel(){
+    	setBackground(new Color(0x41, 0x76, 0x43));
+    	setVisible(true);
+    	setOpaque(true);
+	}
+	
+	 private void paintAreas(Graphics g) {
+		  
+		  
+		  
+	 }
+	
+}

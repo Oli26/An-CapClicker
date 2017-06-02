@@ -1,0 +1,65 @@
+package com.demboiz.ancapclicker.view;
+
+import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
+
+import javax.swing.AbstractAction;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.SwingConstants;
+
+import com.demboiz.ancapclicker.model.Player;
+
+
+
+public class GameMenu {
+
+	private JFrame frame;
+	private GridLayout layout;
+	
+	public GameMenu(){
+		// Game variables
+		Player player = new Player();
+		
+		
+		
+		
+		frame = new JFrame("An-Cap Clicker");
+		layout = new GridLayout(20,5);
+		frame.setLayout(layout);
+		
+		
+		
+		// Team label.
+		JLabel team = new JLabel("Team Demboiz");
+		team.setHorizontalAlignment(SwingConstants.RIGHT);
+		team.setVerticalAlignment(SwingConstants.TOP);
+		frame.add(team);
+		
+		
+		
+		// Money label.
+		JLabel moneyLabel = new JLabel("Money: " + Integer.toString(player.getMoney()) + "$");
+		moneyLabel.setHorizontalAlignment(SwingConstants.CENTER);
+		//moneyLabel.setVerticalAlignment(SwingConstants.TOP);
+		frame.add(moneyLabel);
+		
+		AbstractAction buyAsset1Action = new AbstractAction(){
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				player.gainAsset(0, 1);
+			}
+		};
+		
+		
+		JButton buyAsset1 = new JButton(buyAsset1Action);
+		buyAsset1.setText("Buy laborer");
+		frame.add(buyAsset1);
+		
+		frame.setSize(500, 800);
+		frame.setVisible(true);
+		
+		
+	}
+}

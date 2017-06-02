@@ -1,0 +1,31 @@
+package com.demboiz.ancapclicker.view;
+
+import java.awt.GridLayout;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.SwingConstants;
+
+
+
+public class GameMenu {
+
+	private JFrame frame;
+	private GridLayout layout;
+	
+	public GameMenu(){
+		frame = new JFrame("An-Cap Clicker");
+		layout = new GridLayout(3,5);
+		frame.setLayout(layout);
+		
+		JLabel team = new JLabel("Team Demboiz");
+		team.setHorizontalAlignment(SwingConstants.RIGHT);
+		team.setVerticalAlignment(SwingConstants.TOP);
+		frame.add(team);
+		
+		
+		frame.setSize(500, 800);
+		frame.setVisible(true);
+		
+		
+	}
+}
