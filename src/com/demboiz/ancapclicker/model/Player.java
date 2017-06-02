@@ -5,7 +5,39 @@ public class Player(){
 	
 	// Initialise variables.
 	private int money;
+	private List<Asset> assets= new ArrayList<Asset>();
 	
+	
+	/**
+	 * Constructor.
+	 */
+	public Player(){
+		assets.add(new asset1());
+		
+	}
+	
+	
+	
+	/**
+	 * Update.
+	 */
+	public void update(){
+		for(Asset asset:assets){
+			gainMoney(asset.getIncome());
+		}
+	}
+	
+	
+	/**
+	 * Increase the amount of a specific asset.
+	 */
+	public void gainAsset(int type,int amount){
+		try{
+			assets.get(type).gainAsset(amount);
+		}catch(e IndexOutOfBoundsException){
+			System.out.println("Fail");
+		}
+	}
 	
 	
 	/**
