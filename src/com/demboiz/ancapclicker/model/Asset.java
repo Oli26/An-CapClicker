@@ -3,16 +3,17 @@ package com.demboiz.ancapclicker.model;
 public class Asset {
 
 	// Initialise variables.
-		protected int income;
-		protected int amount;
+		protected long income;
+		protected long amount;
 		protected String name;
+		protected long cost;
 		
 		
-		
-		public Asset(String name, int income){
+		public Asset(String name, long income, long cost){
 			this.name = name;
 			this.income = income;
 			this.amount = 0;
+			this.cost = cost;
 		}
 		
 		
@@ -24,10 +25,14 @@ public class Asset {
 		}
 		
 		
+		public void priceIncrease(){
+			cost = Math.round(cost*1 + 0.1*amount);
+		}
+		
 		/**
 		 * Returns amount.
 		 */
-		public int getAssetAmount(){
+		public long getAssetAmount(){
 			return this.amount;
 		}
 		
@@ -35,8 +40,12 @@ public class Asset {
 		/**
 		 * Returns income.
 		 */
-		public int getIncome(){
+		public long getIncome(){
 			return income;	
+		}
+		
+		public long getCost(){
+			return cost;
 		}
 		
 		

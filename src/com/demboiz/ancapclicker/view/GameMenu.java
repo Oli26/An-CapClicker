@@ -31,7 +31,7 @@ public class GameMenu {
 		
 		
 		frame = new JFrame("An-Cap Clicker");
-		layout = new GridLayout(20,5);
+		layout = new GridLayout(15,0);
 		frame.setLayout(layout);
 
 		
@@ -44,7 +44,7 @@ public class GameMenu {
 		
 		
 		// Money label.
-		JLabel moneyLabel = new JLabel("Money: " + Integer.toString(player.getMoney()) + "$");
+		JLabel moneyLabel = new JLabel("Money: " + player.getMoney() + "$");
 		moneyLabel.setHorizontalAlignment(SwingConstants.CENTER);
 		frame.add(moneyLabel);
 		
@@ -58,12 +58,31 @@ public class GameMenu {
 		frame.add(asset2Label);
 		
 		
+		
+		// Update
+		TimerTask updateTask = new TimerTask(){
+			public void run(){
+				player.update();
+				moneyLabel.setText("Money: " + player.getMoney() + "$");
+			}
+			
+		};
+		
+		Timer timer = new Timer();
+		long time0 = 0;
+		long time1000 = 1000;
+		timer.schedule(updateTask, time0, time1000);
+		
+		
+		
+		
 		// Asset1 button creation.
 		AbstractAction buyAsset1Action = new AbstractAction(){
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				player.gainAsset(0, 1);
 				asset1Label.setText("Laborers: " + player.returnAsset(0).getAssetAmount());
+				moneyLabel.setText("Money: " + player.getMoney() + "$");
 			}
 		};
 		JButton buyAsset1 = new JButton(buyAsset1Action);
@@ -79,6 +98,8 @@ public class GameMenu {
 				public void actionPerformed(ActionEvent e) {
 					player.gainAsset(1, 1);
 					asset2Label.setText("Primative machines: " + player.returnAsset(1).getAssetAmount());
+					moneyLabel.setText("Money: " + player.getMoney() + "$");
+					
 				}
 		};
 		JButton buyAsset2 = new JButton(buyAsset2Action);
@@ -96,18 +117,6 @@ public class GameMenu {
 		frame.setVisible(true);
 		
 		
-		TimerTask updateTask = new TimerTask(){
-			public void run(){
-				player.update();
-				moneyLabel.setText("Money: " + Integer.toString(player.getMoney()) + "$");
-			}
-			
-		};
-		
-		Timer timer = new Timer();
-		long time0 = 0;
-		long time1000 = 1000;
-		timer.schedule(updateTask, time0, time1000);
 		
 		
 		

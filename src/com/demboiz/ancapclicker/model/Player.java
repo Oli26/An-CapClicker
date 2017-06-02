@@ -6,7 +6,7 @@ import java.util.List;
 public class Player {
 
 	// Initialise variables.
-	private int money;
+	private long money;
 	private List<Asset> assets= new ArrayList<Asset>();
 	
 	
@@ -14,8 +14,9 @@ public class Player {
 	 * Constructor.
 	 */
 	public Player(){
-		assets.add(new Asset("Asset1", 1));
-		assets.add(new Asset("Asset2", 5));
+		money += 10;
+		assets.add(new Asset("Asset1", 1,10));
+		assets.add(new Asset("Asset2", 5,55));
 	}
 	
 	
@@ -35,7 +36,13 @@ public class Player {
 	 */
 	public void gainAsset(int type,int amount){
 		try{
-			assets.get(type).gainAsset(amount);
+			if(money - assets.get(type).getCost() < 0){
+				
+				
+			}else{
+				money = money - assets.get(type).getCost();
+				assets.get(type).gainAsset(amount);
+			}
 		}catch(IndexOutOfBoundsException e){
 			System.out.println("Fail");
 		}
@@ -49,28 +56,28 @@ public class Player {
 	/**
 	 * Returns money.
 	 */
-	public int getMoney(){
+	public long getMoney(){
 		return money;
 	}
 	
 	/**
 	 * Set money. Input amount.
 	 */
-	public void setMoney(int money){
+	public void setMoney(long money){
 		this.money = money;
 	}
 	
 	/**
 	 * Gain money. Input amount.
 	 */
-	public void gainMoney(int gain){
+	public void gainMoney(long gain){
 		this.money += gain;
 	}
 	
 	/**
 	 * Lose money. Input amount.
 	 */	
-	public int spendMoney(int loss){
+	public int spendMoney(long loss){
 		if(money - loss < 0){
 			return 0;
 		}else{
