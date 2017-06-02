@@ -1,0 +1,16 @@
+package com.demboiz.ancapclicker.controller;
+
+import javax.swing.AbstractAction;
+
+import javafx.event.ActionEvent;
+
+public class NewGameAction extends AbstractAction {
+	private MainMenu menu;
+	
+	
+	@Override
+    public void actionPerformed(ActionEvent e) {
+        editor.createEdge();
+    }
+
+}

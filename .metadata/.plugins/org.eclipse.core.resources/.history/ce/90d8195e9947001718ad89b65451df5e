@@ -1,0 +1,16 @@
+package com.demboiz.ancapclicker.controller;
+
+import javax.swing.AbstractAction;
+
+import com.demboiz.ancapclicker.MainMenu;
+
+public class NewGameAction extends AbstractAction {
+
+	
+	@override
+	public void actionPerformed(ActionEvent e) {
+		menu.newGame();
+
+	}
+
+}

@@ -1,0 +1,13 @@
+package com.demboiz.ancapclicker.model;
+
+import java.util.ArrayList;
+import com.demboiz.ancapclicker.model.*;
+
+public class Player {
+
+	// Initialise variables.
+	private int money;
+	private List<Asset> assets= new ArrayList<Asset>();
+	
+	
+}

@@ -1,8 +1,10 @@
 package com.demboiz.ancapclicker.model;
 
+import java.util.ArrayList;
+import java.util.List;
 
-public class Player(){
-	
+public class Player {
+
 	// Initialise variables.
 	private int money;
 	private List<Asset> assets= new ArrayList<Asset>();
@@ -34,7 +36,7 @@ public class Player(){
 	public void gainAsset(int type,int amount){
 		try{
 			assets.get(type).gainAsset(amount);
-		}catch(e IndexOutOfBoundsException){
+		}catch(IndexOutOfBoundsException e){
 			System.out.println("Fail");
 		}
 	}
@@ -66,12 +68,11 @@ public class Player(){
 	 */	
 	public int spendMoney(int loss){
 		if(money - loss < 0){
-			return 0
+			return 0;
 		}else{
 			money -= loss;
 			return 1;
 		}
 	}
 	
-		
 }

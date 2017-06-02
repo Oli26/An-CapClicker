@@ -1,18 +1,15 @@
 package com.demboiz.ancapclicker;
 
-import java.awt.Component;
-import java.awt.Font;
-import java.awt.FontFormatException;
-import java.awt.GraphicsEnvironment;
 import java.awt.GridLayout;
-import java.io.File;
-import java.io.IOException;
-import java.io.InputStream;
 
+import javax.swing.Action;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.SwingConstants;
+
+import com.demboiz.ancapclicker.controller.GameMenu;
+import com.demboiz.ancapclicker.controller.NewGameAction;
 
 public class MainMenu {
 
@@ -31,8 +28,14 @@ public class MainMenu {
 	JLabel title = new JLabel("An-Cap Clicker");
 	title.setHorizontalAlignment(SwingConstants.CENTER);
 	frame.add(title);
-	newGame = new JButton("New Game");
+	
+	
+	Action newGameAction = new NewGameAction(this);
+	newGame = new JButton(newGameAction);
+	newGame.setText("New Game");
 	frame.add(newGame);
+	
+	
 	loadGame = new JButton("Load Game");
 	frame.add(loadGame);
 	options = new JButton("Options");
@@ -44,5 +47,13 @@ public class MainMenu {
 	frame.add(team);
 	frame.setSize(300, 500);
 	frame.setVisible(true);
+	}
+	
+	
+	
+	
+	public void newGame(){
+		new GameMenu();
+		
 	}
 }

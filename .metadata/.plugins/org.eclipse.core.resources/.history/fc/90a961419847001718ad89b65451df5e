@@ -1,0 +1,19 @@
+package com.demboiz.ancapclicker.controller;
+
+import java.awt.GridLayout;
+import javax.swing.JFrame;
+
+
+
+public class GameMenu {
+
+	private JFrame frame;
+	private GridLayout layout;
+	
+	public GameMenu(){
+		frame = new JFrame("An-Cap Clicker");
+		layout = new GridLayout(0,1);
+		
+		
+	}
+}
