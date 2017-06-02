@@ -12,7 +12,7 @@ public class Player(){
 	 * Constructor.
 	 */
 	public Player(){
-		assets.add(new asset1());
+		assets.add(new Asset("Asset1", 1));
 		
 	}
 	

@@ -13,6 +13,7 @@ public class Asset(){
 	public Asset(String name, int income){
 		this.name = name;
 		this.income = income;
+		this.amount = 0;
 	}
 	
 	
