@@ -8,8 +8,8 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.SwingConstants;
 
+import com.demboiz.ancapclicker.controller.GameMenu;
 import com.demboiz.ancapclicker.controller.NewGameAction;
-import com.demboiz.ancapclicker.view.GameMenu;
 
 public class MainMenu {
 

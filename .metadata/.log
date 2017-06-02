@@ -2175,3 +2175,213 @@ Java Model Exception: Java Model Status [  does not exist]
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1519)
 !SUBENTRY 1 org.eclipse.jdt.core 4 969 2017-06-02 15:51:15.001
 !MESSAGE   does not exist
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2017-06-02 15:52:49.627
+!MESSAGE Internal Error
+!STACK 1
+Java Model Exception: Java Model Status [C:\Program Files\Java\jre1.8.0_131\lib\rt.jar is not on its project's build path]
+	at org.eclipse.jdt.internal.core.PackageFragmentRoot.getRawClasspathEntry(PackageFragmentRoot.java:562)
+	at org.eclipse.jdt.internal.core.JavaElement.getJavadocBaseLocation(JavaElement.java:728)
+	at org.eclipse.jdt.internal.core.BinaryType.getJavadocContents(BinaryType.java:1011)
+	at org.eclipse.jdt.internal.core.BinaryMethod.getAttachedJavadoc(BinaryMethod.java:717)
+	at org.eclipse.jdt.internal.ui.text.javadoc.JavadocContentAccess2.getHTMLContent(JavadocContentAccess2.java:538)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.extractJavadoc(ProposalInfo.java:90)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.computeInfo(ProposalInfo.java:75)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.getInfo(ProposalInfo.java:60)
+	at org.eclipse.jdt.internal.ui.text.java.AbstractJavaCompletionProposal.getAdditionalProposalInfo(AbstractJavaCompletionProposal.java:602)
+	at org.eclipse.jface.text.contentassist.AdditionalInfoController$Timer$2$1.run(AdditionalInfoController.java:113)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.jdt.core 4 1006 2017-06-02 15:52:49.628
+!MESSAGE C:\Program Files\Java\jre1.8.0_131\lib\rt.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2017-06-02 15:52:50.063
+!MESSAGE Internal Error
+!STACK 1
+Java Model Exception: Java Model Status [C:\Program Files\Java\jre1.8.0_131\lib\rt.jar is not on its project's build path]
+	at org.eclipse.jdt.internal.core.PackageFragmentRoot.getRawClasspathEntry(PackageFragmentRoot.java:562)
+	at org.eclipse.jdt.internal.core.JavaElement.getJavadocBaseLocation(JavaElement.java:728)
+	at org.eclipse.jdt.internal.core.BinaryType.getJavadocContents(BinaryType.java:1011)
+	at org.eclipse.jdt.internal.core.BinaryMethod.getAttachedJavadoc(BinaryMethod.java:717)
+	at org.eclipse.jdt.internal.ui.text.javadoc.JavadocContentAccess2.getHTMLContent(JavadocContentAccess2.java:538)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.extractJavadoc(ProposalInfo.java:90)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.computeInfo(ProposalInfo.java:75)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.getInfo(ProposalInfo.java:60)
+	at org.eclipse.jdt.internal.ui.text.java.AbstractJavaCompletionProposal.getAdditionalProposalInfo(AbstractJavaCompletionProposal.java:602)
+	at org.eclipse.jface.text.contentassist.AdditionalInfoController$Timer$2$1.run(AdditionalInfoController.java:113)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.jdt.core 4 1006 2017-06-02 15:52:50.063
+!MESSAGE C:\Program Files\Java\jre1.8.0_131\lib\rt.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2017-06-02 15:52:50.325
+!MESSAGE Internal Error
+!STACK 1
+Java Model Exception: Java Model Status [C:\Program Files\Java\jre1.8.0_131\lib\rt.jar is not on its project's build path]
+	at org.eclipse.jdt.internal.core.PackageFragmentRoot.getRawClasspathEntry(PackageFragmentRoot.java:562)
+	at org.eclipse.jdt.internal.core.JavaElement.getJavadocBaseLocation(JavaElement.java:728)
+	at org.eclipse.jdt.internal.core.BinaryType.getJavadocContents(BinaryType.java:1011)
+	at org.eclipse.jdt.internal.core.BinaryField.getAttachedJavadoc(BinaryField.java:121)
+	at org.eclipse.jdt.internal.ui.text.javadoc.JavadocContentAccess2.getHTMLContent(JavadocContentAccess2.java:538)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.extractJavadoc(ProposalInfo.java:90)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.computeInfo(ProposalInfo.java:75)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.getInfo(ProposalInfo.java:60)
+	at org.eclipse.jdt.internal.ui.text.java.AbstractJavaCompletionProposal.getAdditionalProposalInfo(AbstractJavaCompletionProposal.java:602)
+	at org.eclipse.jface.text.contentassist.AdditionalInfoController$Timer$2$1.run(AdditionalInfoController.java:113)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.jdt.core 4 1006 2017-06-02 15:52:50.325
+!MESSAGE C:\Program Files\Java\jre1.8.0_131\lib\rt.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2017-06-02 15:52:53.142
+!MESSAGE Internal Error
+!STACK 1
+Java Model Exception: Java Model Status [C:\Program Files\Java\jre1.8.0_131\lib\rt.jar is not on its project's build path]
+	at org.eclipse.jdt.internal.core.PackageFragmentRoot.getRawClasspathEntry(PackageFragmentRoot.java:562)
+	at org.eclipse.jdt.internal.core.JavaElement.getJavadocBaseLocation(JavaElement.java:728)
+	at org.eclipse.jdt.internal.core.BinaryType.getJavadocContents(BinaryType.java:1011)
+	at org.eclipse.jdt.internal.core.BinaryMethod.getAttachedJavadoc(BinaryMethod.java:717)
+	at org.eclipse.jdt.internal.ui.text.javadoc.JavadocContentAccess2.getHTMLContent(JavadocContentAccess2.java:538)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.extractJavadoc(ProposalInfo.java:90)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.computeInfo(ProposalInfo.java:75)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.getInfo(ProposalInfo.java:60)
+	at org.eclipse.jdt.internal.ui.text.java.AbstractJavaCompletionProposal.getAdditionalProposalInfo(AbstractJavaCompletionProposal.java:602)
+	at org.eclipse.jface.text.contentassist.AdditionalInfoController$Timer$2$1.run(AdditionalInfoController.java:113)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.jdt.core 4 1006 2017-06-02 15:52:53.142
+!MESSAGE C:\Program Files\Java\jre1.8.0_131\lib\rt.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2017-06-02 15:52:53.298
+!MESSAGE Internal Error
+!STACK 1
+Java Model Exception: Java Model Status [C:\Program Files\Java\jre1.8.0_131\lib\rt.jar is not on its project's build path]
+	at org.eclipse.jdt.internal.core.PackageFragmentRoot.getRawClasspathEntry(PackageFragmentRoot.java:562)
+	at org.eclipse.jdt.internal.core.JavaElement.getJavadocBaseLocation(JavaElement.java:728)
+	at org.eclipse.jdt.internal.core.BinaryType.getJavadocContents(BinaryType.java:1011)
+	at org.eclipse.jdt.internal.core.BinaryMethod.getAttachedJavadoc(BinaryMethod.java:717)
+	at org.eclipse.jdt.internal.ui.text.javadoc.JavadocContentAccess2.getHTMLContent(JavadocContentAccess2.java:538)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.extractJavadoc(ProposalInfo.java:90)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.computeInfo(ProposalInfo.java:75)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.getInfo(ProposalInfo.java:60)
+	at org.eclipse.jdt.internal.ui.text.java.AbstractJavaCompletionProposal.getAdditionalProposalInfo(AbstractJavaCompletionProposal.java:602)
+	at org.eclipse.jface.text.contentassist.AdditionalInfoController$Timer$2$1.run(AdditionalInfoController.java:113)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.jdt.core 4 1006 2017-06-02 15:52:53.298
+!MESSAGE C:\Program Files\Java\jre1.8.0_131\lib\rt.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2017-06-02 15:52:53.477
+!MESSAGE Internal Error
+!STACK 1
+Java Model Exception: Java Model Status [C:\Program Files\Java\jre1.8.0_131\lib\rt.jar is not on its project's build path]
+	at org.eclipse.jdt.internal.core.PackageFragmentRoot.getRawClasspathEntry(PackageFragmentRoot.java:562)
+	at org.eclipse.jdt.internal.core.JavaElement.getJavadocBaseLocation(JavaElement.java:728)
+	at org.eclipse.jdt.internal.core.BinaryType.getJavadocContents(BinaryType.java:1011)
+	at org.eclipse.jdt.internal.core.BinaryMethod.getAttachedJavadoc(BinaryMethod.java:717)
+	at org.eclipse.jdt.internal.ui.text.javadoc.JavadocContentAccess2.getHTMLContent(JavadocContentAccess2.java:538)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.extractJavadoc(ProposalInfo.java:90)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.computeInfo(ProposalInfo.java:75)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.getInfo(ProposalInfo.java:60)
+	at org.eclipse.jdt.internal.ui.text.java.AbstractJavaCompletionProposal.getAdditionalProposalInfo(AbstractJavaCompletionProposal.java:602)
+	at org.eclipse.jface.text.contentassist.AdditionalInfoController$Timer$2$1.run(AdditionalInfoController.java:113)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.jdt.core 4 1006 2017-06-02 15:52:53.477
+!MESSAGE C:\Program Files\Java\jre1.8.0_131\lib\rt.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2017-06-02 15:52:59.160
+!MESSAGE Internal Error
+!STACK 1
+Java Model Exception: Java Model Status [  does not exist]
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:786)
+	at org.eclipse.jdt.internal.core.BinaryType.newSupertypeHierarchy(BinaryType.java:826)
+	at org.eclipse.jdt.internal.core.BinaryType.newSupertypeHierarchy(BinaryType.java:778)
+	at org.eclipse.jdt.internal.corext.util.SuperTypeHierarchyCache.getTypeHierarchy(SuperTypeHierarchyCache.java:142)
+	at org.eclipse.jdt.internal.corext.util.SuperTypeHierarchyCache.getTypeHierarchy(SuperTypeHierarchyCache.java:94)
+	at org.eclipse.jdt.internal.corext.util.SuperTypeHierarchyCache.getMethodOverrideTester(SuperTypeHierarchyCache.java:103)
+	at org.eclipse.jdt.internal.ui.javaeditor.JavaElementSuperImplementationHyperlink.findSuperImplementation(JavaElementSuperImplementationHyperlink.java:106)
+	at org.eclipse.jdt.internal.ui.javaeditor.JavaElementHyperlinkSuperImplementationDetector.isOverriddenMethod(JavaElementHyperlinkSuperImplementationDetector.java:56)
+	at org.eclipse.jdt.internal.ui.javaeditor.JavaElementHyperlinkSuperImplementationDetector.addHyperlinks(JavaElementHyperlinkSuperImplementationDetector.java:41)
+	at org.eclipse.jdt.internal.ui.javaeditor.JavaElementHyperlinkDetector.detectHyperlinks(JavaElementHyperlinkDetector.java:115)
+	at org.eclipse.ui.texteditor.HyperlinkDetectorRegistry$HyperlinkDetectorDelegate.detectHyperlinks(HyperlinkDetectorRegistry.java:78)
+	at org.eclipse.jface.text.hyperlink.HyperlinkManager.findHyperlinks(HyperlinkManager.java:287)
+	at org.eclipse.jface.text.hyperlink.HyperlinkManager.findHyperlinks(HyperlinkManager.java:259)
+	at org.eclipse.jface.text.hyperlink.HyperlinkManager.mouseMove(HyperlinkManager.java:455)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:213)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4418)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1079)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4236)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3824)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1121)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1022)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:150)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:693)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:610)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:148)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:138)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:388)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:243)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:673)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:610)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1519)
+!SUBENTRY 1 org.eclipse.jdt.core 4 969 2017-06-02 15:52:59.160
+!MESSAGE   does not exist
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2017-06-02 15:53:51.796
+!MESSAGE Internal Error
+!STACK 1
+Java Model Exception: Java Model Status [C:\Program Files\Java\jre1.8.0_131\lib\rt.jar is not on its project's build path]
+	at org.eclipse.jdt.internal.core.PackageFragmentRoot.getRawClasspathEntry(PackageFragmentRoot.java:562)
+	at org.eclipse.jdt.internal.core.JavaElement.getJavadocBaseLocation(JavaElement.java:728)
+	at org.eclipse.jdt.internal.core.BinaryType.getJavadocContents(BinaryType.java:1011)
+	at org.eclipse.jdt.internal.core.BinaryMethod.getAttachedJavadoc(BinaryMethod.java:717)
+	at org.eclipse.jdt.internal.ui.text.javadoc.JavadocContentAccess2.getHTMLContent(JavadocContentAccess2.java:538)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.extractJavadoc(ProposalInfo.java:90)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.computeInfo(ProposalInfo.java:75)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.getInfo(ProposalInfo.java:60)
+	at org.eclipse.jdt.internal.ui.text.java.AbstractJavaCompletionProposal.getAdditionalProposalInfo(AbstractJavaCompletionProposal.java:602)
+	at org.eclipse.jface.text.contentassist.AdditionalInfoController$Timer$2$1.run(AdditionalInfoController.java:113)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.jdt.core 4 1006 2017-06-02 15:53:51.796
+!MESSAGE C:\Program Files\Java\jre1.8.0_131\lib\rt.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2017-06-02 15:53:52.197
+!MESSAGE Internal Error
+!STACK 1
+Java Model Exception: Java Model Status [C:\Program Files\Java\jre1.8.0_131\lib\rt.jar is not on its project's build path]
+	at org.eclipse.jdt.internal.core.PackageFragmentRoot.getRawClasspathEntry(PackageFragmentRoot.java:562)
+	at org.eclipse.jdt.internal.core.JavaElement.getJavadocBaseLocation(JavaElement.java:728)
+	at org.eclipse.jdt.internal.core.BinaryType.getJavadocContents(BinaryType.java:1011)
+	at org.eclipse.jdt.internal.core.BinaryMethod.getAttachedJavadoc(BinaryMethod.java:717)
+	at org.eclipse.jdt.internal.ui.text.javadoc.JavadocContentAccess2.getHTMLContent(JavadocContentAccess2.java:538)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.extractJavadoc(ProposalInfo.java:90)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.computeInfo(ProposalInfo.java:75)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.getInfo(ProposalInfo.java:60)
+	at org.eclipse.jdt.internal.ui.text.java.AbstractJavaCompletionProposal.getAdditionalProposalInfo(AbstractJavaCompletionProposal.java:602)
+	at org.eclipse.jface.text.contentassist.AdditionalInfoController$Timer$2$1.run(AdditionalInfoController.java:113)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.jdt.core 4 1006 2017-06-02 15:53:52.197
+!MESSAGE C:\Program Files\Java\jre1.8.0_131\lib\rt.jar is not on its project's build path
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2017-06-02 15:53:52.821
+!MESSAGE Internal Error
+!STACK 1
+Java Model Exception: Java Model Status [C:\Program Files\Java\jre1.8.0_131\lib\rt.jar is not on its project's build path]
+	at org.eclipse.jdt.internal.core.PackageFragmentRoot.getRawClasspathEntry(PackageFragmentRoot.java:562)
+	at org.eclipse.jdt.internal.core.JavaElement.getJavadocBaseLocation(JavaElement.java:728)
+	at org.eclipse.jdt.internal.core.BinaryType.getJavadocContents(BinaryType.java:1011)
+	at org.eclipse.jdt.internal.core.BinaryMethod.getAttachedJavadoc(BinaryMethod.java:717)
+	at org.eclipse.jdt.internal.ui.text.javadoc.JavadocContentAccess2.getHTMLContent(JavadocContentAccess2.java:538)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.extractJavadoc(ProposalInfo.java:90)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.computeInfo(ProposalInfo.java:75)
+	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.getInfo(ProposalInfo.java:60)
+	at org.eclipse.jdt.internal.ui.text.java.AbstractJavaCompletionProposal.getAdditionalProposalInfo(AbstractJavaCompletionProposal.java:602)
+	at org.eclipse.jface.text.contentassist.AdditionalInfoController$Timer$2$1.run(AdditionalInfoController.java:113)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.jdt.core 4 1006 2017-06-02 15:53:52.821
+!MESSAGE C:\Program Files\Java\jre1.8.0_131\lib\rt.jar is not on its project's build path
