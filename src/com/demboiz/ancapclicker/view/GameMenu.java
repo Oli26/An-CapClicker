@@ -41,11 +41,21 @@ public class GameMenu {
 		team.setVerticalAlignment(SwingConstants.TOP);
 		frame.add(team);
 		
-		
-		
 		// Money label.
 		JLabel moneyLabel = new JLabel("Money: " + player.getMoney() + "$");
 		moneyLabel.setHorizontalAlignment(SwingConstants.CENTER);
+		
+		// Make money button.
+		AbstractAction makeMoney = new AbstractAction(){
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				player.gainMoney(1);
+				moneyLabel.setText("Money: " + player.getMoney() + "$");
+			}
+		};
+		JButton makeMoneyButton = new JButton(makeMoney);
+		makeMoneyButton.setText("Make big bucks");
+		frame.add(makeMoneyButton);
 		frame.add(moneyLabel);
 		
 		

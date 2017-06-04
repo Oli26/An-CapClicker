@@ -22,6 +22,7 @@ public class Asset {
 		 */
 		public void gainAsset(int amount){
 			this.amount += amount;
+			priceIncrease();
 		}
 		
 		
