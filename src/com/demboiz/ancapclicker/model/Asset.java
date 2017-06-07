@@ -23,8 +23,15 @@ public class Asset {
 		public void gainAsset(int amount){
 			this.amount += amount;
 			priceIncrease();
+			incomeIncrease();
 		}
 		
+		
+		public void incomeIncrease(){
+			if(amount == 100 || amount == 200 || amount == 300){
+				income = income*2;
+			}
+		}
 		
 		public void priceIncrease(){
 			cost = Math.round(cost*1 + 0.1*amount);

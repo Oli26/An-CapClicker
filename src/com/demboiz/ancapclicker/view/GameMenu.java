@@ -49,7 +49,7 @@ public class GameMenu {
 		AbstractAction makeMoney = new AbstractAction(){
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				player.gainMoney(1);
+				player.gainMoney(player.getClickAmount());
 				moneyLabel.setText("Money: " + player.getMoney() + "$");
 			}
 		};
@@ -113,13 +113,22 @@ public class GameMenu {
 				}
 		};
 		JButton buyAsset2 = new JButton(buyAsset2Action);
-				buyAsset2.setText("Buy primative machine");
-				frame.add(buyAsset2);
+		buyAsset2.setText("Buy primative machine");
+		frame.add(buyAsset2);
 				
 				
 
 		
-		
+		AbstractAction buyClickUpgrade = new AbstractAction(){
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				player.upgradeClickAmount();
+				
+			}
+		};
+		JButton buyClickUpgradeButton = new JButton(buyClickUpgrade);
+		buyClickUpgradeButton.setText("Upgrade clicker");
+		frame.add(buyClickUpgradeButton);
 		
 		
 		

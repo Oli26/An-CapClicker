@@ -8,13 +8,14 @@ public class Player {
 	// Initialise variables.
 	private long money;
 	private List<Asset> assets= new ArrayList<Asset>();
-	
+	private long clickAmount;
 	
 	/**
 	 * Constructor.
 	 */
 	public Player(){
 		money += 10;
+		clickAmount = 1;
 		assets.add(new Asset("Asset1", 1,10));
 		assets.add(new Asset("Asset2", 5,55));
 	}
@@ -86,4 +87,17 @@ public class Player {
 		}
 	}
 	
+	public void upgradeClickAmount(){
+		if(spendMoney(clickAmount*100) == 1){
+			setClickAmount(clickAmount*2);
+		}
+	}
+	
+	public void setClickAmount(long clickAmount){
+		this.clickAmount = clickAmount;
+	}
+	
+	public long getClickAmount(){
+		return clickAmount;
+	}
 }
